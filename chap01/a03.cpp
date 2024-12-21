@@ -12,17 +12,14 @@ int main()
     bool ans_flag = false;
     for (int i = 0; i < n; i++)
     {
-        sum += p[i];
         for (int j = 0; j < n; j++)
         {
-            sum += q[j];
-            if (sum == k) 
+            if ((p[i] + q[j]) == k) 
             {
                 ans_flag = true;
                 break;
             }
         }
-        sum = 0;
     }
     
     if (ans_flag) cout << "Yes";
